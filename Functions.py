@@ -95,9 +95,11 @@ def run_sim_mf(p):
         x[i + 1] = x[i] + p['dt'] * \
             ((1 - x[i]) / p['taur'] - x[i] * u[i + 1] * R[i + 1])
 
+    results['t'] = Sim_Time
     results['R'] = R
     results['u'] = u
     results['x'] = x
+
     return results
 
 
